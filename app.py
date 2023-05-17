@@ -34,4 +34,4 @@ def delete(sno):
     db.session.delete(todo) 
     db.session.commit()
     return redirect("/")
-app.run(debug=True)
+app.run(debug=False,host='0.0.0.0')
