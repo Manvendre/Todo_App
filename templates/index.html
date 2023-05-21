@@ -31,13 +31,13 @@
         <h2>Add New Todo</h2>
         <form action="/" method="POST">
             <div class="mb-3">
-              <label for="tital" class="form-label">Tital</label>
-              <input type="text" name="tital" class="form-control" id="tital" aria-describedby="emailHelp">
+              <label for="Tital" class="form-label">Tital</label>
+              <input type="text" name="tital" class="border border-dark form-control" id="tital" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text"></div>
             </div>
             <div class="mb-3">
               <label for="desc" class="form-label" >Description</label>
-              <input type="text" class="form-control" name="desc" id="desc">
+              <input type="text" class="border border-dark form-control" name="desc" id="desc">
             </div>
             
             <button type="submit" class="btn btn-dark">Add</button>
@@ -45,14 +45,14 @@
       </div>
       <div class="container my-3 " >
         <h2>Your Todos</h2>
-        <table class="table table-dark table-striped">
-        <thead>
-          <tr>
-            <th scope="col">sno</th>
-            <th scope="col">tital</th>
-            <th scope="col">description</th>
-            <th scope="col">Time</th>
-            <th scope="col">Action</th>
+        <table  class=" table table-dark table-striped ">
+        <thead  >
+          <tr style=" border-top-right-radius: 15px; border-top-left-radius: 15px;">
+            <th style=" border-top-left-radius: 15px;" scope="col">SNO</th>
+            <th scope="col">TITAL</th>
+            <th scope="col">DESCRIPTION</th>
+            <th scope="col">TIME</th>
+            <th style="  border-top-right-radius: 15px;" scope="col">ACTION</th>
           </tr>
         </thead>
         <tbody>
@@ -65,6 +65,8 @@
           <td>{{todo.date_created}}</td>
           <th>
             <a href="/delete/{{todo.sno}}" type="button" class="btn btn-dark">Done</button>
+              <br>
+     <!--   <a href="/update/{{todo.sno}}" type="button" class="btn btn-dark">Update</button>-->
           </th>
         </tr>
          {% endfor %}
